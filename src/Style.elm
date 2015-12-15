@@ -1,5 +1,7 @@
 module Style (rules) where
-{-| A tiny library for generating CSS. -}
+{-| A tiny library for generating CSS.
+@docs rules
+-}
 
 
 import List
@@ -14,6 +16,12 @@ type alias RuleSet =
   (String, List Rule)
 
 
+{-|
+    style : String
+    style =
+      Style.rules
+        [ ( "body,html", [("color", "#333")]) ]
+-}
 rules : List RuleSet -> String
 rules sets =
   sets
